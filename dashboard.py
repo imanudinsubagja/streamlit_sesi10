@@ -54,7 +54,18 @@ if selected_year != "Semua":
     filtered_data = data[data["Year"] == selected_year]
 else:
     filtered_data = data
-
+# Informasi kelompok
+st.markdown(
+    """
+    <div style="text-align: center; font-size: 20px; font-weight: bold;">
+        Kelas 4IFP <br>
+        Kelompok 2 : <br>
+        Imanudin Subagja - 240434002 <br>
+        Firmansyah - 240434003
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 # Layout
 st.title("Dashboard Realisasi APBN")
 
