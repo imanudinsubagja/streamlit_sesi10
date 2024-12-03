@@ -1,6 +1,6 @@
 # streamlit_sesi10
 
-#Requirment
+# Requirment
 streamlit
 pandas
 matplotlib
