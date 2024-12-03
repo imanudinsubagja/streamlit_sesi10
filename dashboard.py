@@ -2,6 +2,19 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Display class and group info at the center of the dashboard
+st.markdown(
+    """
+    <div style="text-align: center; font-size: 20px; font-weight: bold;">
+        Kelas 4IFP <br>
+        Kelompok 2 : <br>
+        Imanudin Subagja - 240434002 <br>
+        Firmansyah - 240434003
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 # Load the data
 files = {
     "2012": "realisasi-apbn-2012.xlsx",
@@ -28,22 +41,11 @@ if dataframes:
 else:
     st.error("No data loaded. Please check your files.")
     st.stop()
-    
-# Informasi kelompok
-st.markdown(
-    """
-    <div style="text-align: center; font-size: 20px; font-weight: bold;">
-        Kelas 4IFP <br>
-        Kelompok 2 : <br>
-        Imanudin Subagja - 240434002 <br>
-        Firmansyah - 240434003
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-# Debugging: Show column names
-st.subheader("Debugging: Column Names in Dataset")
-st.write(data.columns.tolist())  # Display column names
+
+# Optional Debugging Section
+if st.sidebar.checkbox("Show Debugging Info (Column Names)", value=False):
+    st.subheader("Debugging: Column Names in Dataset")
+    st.write(data.columns.tolist())  # Display column names
 
 # Updated column names based on dataset
 revenue_col = "Realisasi Keuangan (Rp)"  # Replace with actual revenue column
