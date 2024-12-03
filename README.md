@@ -1,7 +1,7 @@
 # streamlit_sesi10
 
 # Requirment
-streamlit
+streamlit;
 pandas
 matplotlib
 openpyxl
