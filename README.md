@@ -1,7 +1,7 @@
 # streamlit_sesi10
 
 # Requirment
-streamlit;
-pandas
-matplotlib
-openpyxl
+streamlit  <br />
+pandas  <br />
+matplotlib  <br />
+openpyxl  <br />
